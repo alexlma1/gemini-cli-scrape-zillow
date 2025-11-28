@@ -1,0 +1,15 @@
+# Certificate and CA folders
+zillowscrape/zillow_detailed_listings_next_data.json
+zillowscrape/zillow_detailed_listings_next_data.json.sample
+zillowscrape/zillow_detailed_listings_parsed.json
+zillowscrape/zillow_detailed_listings_playwright.json
+zillowscrape/zillow_detailed_listings.csv
+zillowscrape/brightdata_proxy_ca/
+zillowscrape/brightdata_proxy_ca unlocker.zip
+zillowscrape/ca_browser.crt
+zillowscrape/ca.crt
+zillowscrape/ca_mcp_unlocker.crt
+zillowscrape/cli.html
+demo/ca_browser.crt
+demo/ca_mcp_unlocker.crt
+demo/ca.crt
