@@ -3,8 +3,8 @@
 This is my first little project that convinced me to stop coding for fun. Here I am intending to demo a simple workflow using genai. This repo lets an LLM operate a Zillow scraping workflow end‑to‑end with minimal to zero code. It (genai loop) uses detailed instructions and that's it to collect data. The focus is on agent autonomy (gemini‑cli or similar) to complete a task. 
 
 ## Repo layout
-- `zillowscrape/` – This contains some of the final code that gemini-cli wrote to complete the task using only INFO.mds. The data it collected I left out.
-- `demo/` – another version, the INFO.md files are slightly different the coding agent has not left started in this folder.
+- `zillowscrape/` – This contains the INFO.mds or (GEMINI.mds). The data it collected I did not upload nor the scripts it used.
+- `demo/` – another version, the INFO.md files are slightly different this folder was meant to be clean for a demo.
   
 # Quick start (manual)
 ```bash
