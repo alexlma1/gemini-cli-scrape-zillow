@@ -1,6 +1,6 @@
 # Zillow scraper (LLM / no‑code via gemini‑cli)
 
-This is my first little project that convinced me to stop coding for fun. Here I am intending to demo a simple workflow using genai. This repo lets an LLM operate a Zillow scraping workflow end‑to‑end with minimal to zero code. It (genai loop) uses detailed instructions and that's it to collect data. The focus is on agent autonomy (gemini‑cli or similar) to complete a task. 
+ Here, I am intending to demo a simple workflow using genai. This repo lets an LLM operate a Zillow scraping workflow end‑to‑end with minimal to zero code. It (genai loop) uses detailed instructions and that's it to collect data. The focus is on agent autonomy (gemini‑cli or similar) to complete a task. 
 
 ## Repo layout
 - `zillowscrape/` – This contains the INFO.mds or (GEMINI.mds). The data it collected I did not upload nor the scripts it used.
