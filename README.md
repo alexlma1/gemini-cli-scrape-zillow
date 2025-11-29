@@ -1,29 +1,35 @@
 # Zillow scraper (LLM / no‑code via gemini‑cli)
 
-This is my first little project that convinced me to stop coding for fun. Here I am intending to demo a simple workflow using genai. This repo lets an LLM operate a Zillow scraping workflow end‑to‑end with minimal to zero code. It uses Playwright for navigation and Selectolax for parsing, and focuses on agent autonomy (gemini‑cli or similar) to append URLs, run scrapes, and collect results.
+This is my first little project that convinced me to stop coding for fun. Here I am intending to demo a simple workflow using genai. This repo lets an LLM operate a Zillow scraping workflow end‑to‑end with minimal to zero code. It (genai loop) uses detailed instructions and that's it to collect data. The focus is on agent autonomy (gemini‑cli or similar) to complete a task. 
 
 ## Repo layout
-- `zillowscrape/` – runnable scraper, data files, and agent docs (see its README for details).
-- `demo/` – supporting assets (captured pages, CA certs) helpful for debugging and agent demos.
-
-## Quick start (manual)
+- `zillowscrape/` – This contains some of the final code that gemini-cli wrote to complete the task using only INFO.mds. The data it collected I left out.
+- `demo/` – another version, the INFO.md files are slightly different the coding agent has not left started in this folder.
+  
+# Quick start (manual)
 ```bash
 cd zillowscrape
-python -m venv venv && source venv/bin/activate  # Win: venv\Scripts\activate
-pip install playwright selectolax && python -m playwright install chromium
-python zillow_scraper_playwright.py  # reads zillow_listing_urls.csv
+gemini --yolo
 ```
-Output: `zillowscrape/zillow_detailed_listings_playwright.json`.
+Enter the instructions below under usage.
+
+Output a small database: `zillowscrape/zillow_detailed_listings_playwright.json` 
 
 ## LLM / gemini‑cli usage
-Examples of natural‑language tasks you can issue to your agent:
-- "Open zillowscrape/README.md and summarize the steps to run the scraper."
-- "Append these URLs to zillowscrape/zillow_listing_urls.csv and run the scraper."
-- "If selectors break, propose minimal changes to zillow_scraper_playwright.py and re‑run."
-- "Validate the JSON output and print a brief summary (count, average price, missing fields)."
-- "Configure proxy settings if blocked, and explain how to trust the included CA certs."
+```
+Example of a natural language instruction, that combined with the additional info allows the agent to complete the task.
+Utilize the proxy framework to begin collecting listing pages starting at the url at the bottom of the GEMINI.md
+Save this list of listing urls. Consult both the "listing indexing protocol" and the find the "next link" markdown files next. 
+Using a headless browsing tool, extract all data from each listing on each listing url. 
+This data includes, all typical rental characteristics, text descriptions,
+contacts, location, as well as the url to each photo listed. Some listings have multiple units meaning the processs can be repeated more than once per listing.
+All of this data is the final product.
+```
 
-Tip: grant the agent permission to execute shell commands in `zillowscrape/` and to edit `zillow_listing_urls.csv`.
+
+## What did I get?
+Several hundred MB of several thousand apartment listings are produced and saved in JSON format. 
+The output data was all text. Links to each listing's pictures, and all of the relevant rental information you might need thoughtfully aggregated. Plus the run took approximately 30 minutes and cost <$10 of proxy (woops). 
 
 ## Compliance
 Only scrape data you’re authorized to access; respect Zillow’s Terms, robots rules, and local laws.
