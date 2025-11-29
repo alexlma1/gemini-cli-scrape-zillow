@@ -15,7 +15,8 @@ Enter the instructions below under usage.
 
 Output a small database: `zillowscrape/zillow_detailed_listings_playwright.json` 
 
-## LLM / gemini‑cli usage
+## LLM / gemini‑cli usage 
+Say this to gemini-cli on yolo mode 
 ```
 Example of a natural language instruction, that combined with the additional info allows the agent to complete the task.
 Utilize the proxy framework to begin collecting listing pages starting at the url at the bottom of the GEMINI.md
