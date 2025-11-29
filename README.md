@@ -1,6 +1,6 @@
 # Zillow scraper (LLM / no‑code via gemini‑cli)
 
-This repo lets an LLM operate a Zillow scraping workflow end‑to‑end with minimal coding. It uses Playwright for navigation and Selectolax for parsing, and focuses on agent autonomy (gemini‑cli or similar) to append URLs, run scrapes, and collect results.
+This is my first little project that convinced me to stop coding for fun. Here I am intending to demo a simple workflow using genai. This repo lets an LLM operate a Zillow scraping workflow end‑to‑end with minimal to zero code. It uses Playwright for navigation and Selectolax for parsing, and focuses on agent autonomy (gemini‑cli or similar) to append URLs, run scrapes, and collect results.
 
 ## Repo layout
 - `zillowscrape/` – runnable scraper, data files, and agent docs (see its README for details).
